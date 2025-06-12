@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projectile Motion Simulator</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Projectile Motion Simulator</h1>
+    <p>Adjust parameters and watch the projectile(s) fly!</p>
+    <p>Scale: 1 m = 50 px</p>
+
+
+
+
+    <h2>Projectile 1</h2>
+    <div>
+      <label for="velocitySlider">Initial Velocity 1 (pixels/s): <span id="velocityValue">100</span></label><br />
+      <input type="range" id="velocitySlider" min="10" max="300" value="100" />
+    </div>
+
+
+    <div>
+      <label for="angleSlider">Launch Angle 1 (degrees): <span id="angleValue">45</span></label><br />
+      <input type="range" id="angleSlider" min="5" max="90" value="45" />
+    </div>
+
+
+    <hr>
+
+
+    <h2>Projectile 2</h2>
+    <div>
+      <label for="velocity2Slider">Initial Velocity 2 (pixels/s): <span id="velocity2Value">120</span></label><br />
+      <input type="range" id="velocity2Slider" min="10" max="300" value="120" />
+    </div>
+
+
+    <div>
+      <label for="angle2Slider">Launch Angle 2 (degrees): <span id="angle2Value">60</span></label><br />
+      <input type="range" id="angle2Slider" min="5" max="90" value="60" />
+    </div>
+
+
+    <div class="button-row">
+      <div class="left-buttons">
+        <button id="resetButton">Reset Simulation</button>
+        <button id="toggleRealTimeButton">Real Time: ON</button>
+      </div>
+      <div class="right-buttons">
+        <button id="zoomInButton">Zoom In</button>
+        <button id="zoomOutButton">Zoom Out</button>
+        <button id="resetZoomButton">Reset Zoom</button>
+      </div>
+    </div>
+
+
+    <p>Press SPACE to launch/reset projectiles</p>
+    <p id="zoomDisplay">Zoom: 1.00×</p>
+  </main>
+
+
+  <script src="sketch.js"></script>
+</body>
+</html>
